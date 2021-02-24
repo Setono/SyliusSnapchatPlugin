@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Setono\SyliusSnapchatPlugin\DependencyInjection;
 
-use Setono\SyliusSnapchatPlugin\DependencyInjection\SetonoSyliusSnapchatExtension;
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
+use Setono\SyliusSnapchatPlugin\DependencyInjection\SetonoSyliusSnapchatExtension;
 
 /**
  * See examples of tests and configuration options here: https://github.com/SymfonyTest/SymfonyDependencyInjectionTest
