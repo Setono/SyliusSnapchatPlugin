@@ -39,7 +39,7 @@ final class AddLibrarySubscriber extends TagSubscriber
         }
 
         $this->tagBag->addTag(
-            (new TwigTag('@SetonoSyliusSnapchatPlugin/Tag/library.html.twig', [
+            (new TwigTag('@SetonoSyliusSnapchatPlugin/tag/library.html.twig', [
                 'pixels' => $this->getPixels(),
             ]))
                 ->setSection(TagInterface::SECTION_HEAD)
