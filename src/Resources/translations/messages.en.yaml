@@ -1,0 +1,12 @@
+setono_sylius_snapchat:
+    form:
+        pixel:
+            pixel_id: Pixel id
+            pixel_id_placeholder: Insert your pixel id...
+    ui:
+        edit_pixel: Edit Snapchat pixel
+        snapchat: Snapchat
+        manage_pixels: Manage Snapchat pixels
+        new_pixel: New Snapchat pixel
+        pixel_id: Pixel id
+        pixels: Snapchat pixels

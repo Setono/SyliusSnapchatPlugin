@@ -1,0 +1,2 @@
+imports:
+    - "@SetonoSyliusSnapchatPlugin/Resources/config/grids/setono_sylius_snapchat_admin_pixel.yaml"

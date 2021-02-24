@@ -1,1 +1,13 @@
-# TODO Add your admin routes here
+setono_sylius_snapchat_admin_pixel:
+    resource: |
+        section: admin
+        alias: setono_sylius_snapchat.pixel
+        templates: "@SyliusAdmin/Crud"
+        redirect: update
+        grid: setono_sylius_snapchat_admin_pixel
+        vars:
+            all:
+                subheader: setono_sylius_snapchat.ui.manage_pixels
+            index:
+                icon: 'snapchat'
+    type: sylius.resource
