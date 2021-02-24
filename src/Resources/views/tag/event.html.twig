@@ -1,0 +1,7 @@
+<script>
+{%- if parameters is defined -%}
+    snaptr('{{ method }}', '{{ event }}', {{ parameters|raw }});
+{%- else -%}
+    snaptr('{{ method }}', '{{ event }}');
+{%- endif -%}
+</script>

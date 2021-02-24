@@ -1,2 +1,2 @@
-setono_sylius_snapchat:
-    option: Option value
+imports:
+    - { resource: "@SetonoSyliusSnapchatPlugin/Resources/config/app/config.yaml" }
