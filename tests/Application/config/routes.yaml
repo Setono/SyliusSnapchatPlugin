@@ -1,2 +1,2 @@
-acme_sylius_example:
-    resource: "@AcmeSyliusExamplePlugin/Resources/config/routes.yaml"
+setono_sylius_snapchat:
+    resource: "@SetonoSyliusSnapchatPlugin/Resources/config/routes.yaml"
