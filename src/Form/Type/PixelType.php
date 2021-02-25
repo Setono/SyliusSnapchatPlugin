@@ -7,7 +7,7 @@ namespace Setono\SyliusSnapchatPlugin\Form\Type;
 use Sylius\Bundle\ChannelBundle\Form\Type\ChannelChoiceType;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 final class PixelType extends AbstractResourceType
@@ -15,7 +15,7 @@ final class PixelType extends AbstractResourceType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('pixelId', IntegerType::class, [
+            ->add('pixelId', TextType::class, [
                 'label' => 'setono_sylius_snapchat.form.pixel.pixel_id',
                 'attr' => [
                     'min' => 1,
