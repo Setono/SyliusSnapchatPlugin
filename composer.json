@@ -17,40 +17,39 @@
         "setono/tag-bag-bundle": "^2.0",
         "setono/tag-bag-twig": "^1.0",
         "sylius/resource-bundle": "^1.6",
-        "symfony/config": "^4.4 || ^5.0",
-        "symfony/dependency-injection": "^4.4 || ^5.0",
-        "symfony/event-dispatcher": "^4.4 || ^5.0",
+        "symfony/config": "^4.4 || ^5.4",
+        "symfony/dependency-injection": "^4.4 || ^5.4",
+        "symfony/event-dispatcher": "^4.4 || ^5.4",
         "symfony/event-dispatcher-contracts": "^1.1 || ^2.5 || ^3.0",
-        "symfony/form": "^4.4 || ^5.0",
-        "symfony/http-foundation": "^4.4 || ^5.0.7",
-        "symfony/http-kernel": "^4.4 || ^5.1.5",
-        "symfony/security-bundle": "^4.4 || ^5.0",
+        "symfony/form": "^4.4 || ^5.4",
+        "symfony/http-foundation": "^4.4 || ^5.4",
+        "symfony/http-kernel": "^4.4 || ^5.4",
+        "symfony/security-bundle": "^4.4 || ^5.4",
         "webmozart/assert": "^1.9"
     },
     "require-dev": {
-        "api-platform/core": "^2.5",
-        "doctrine/persistence": "^1.3.8",
-        "lexik/jwt-authentication-bundle": "^2.10",
+        "api-platform/core": "^2.6",
+        "friendsofsymfony/oauth-server-bundle": ">2.0.0-alpha.0 ^2.0@dev",
+        "lexik/jwt-authentication-bundle": "^2.15",
         "phpunit/phpunit": "^9.5",
-        "psalm/plugin-symfony": "^2.1",
-        "roave/security-advisories": "dev-latest",
-        "setono/code-quality-pack": "^1.5.1",
+        "setono/code-quality-pack": "^2.2",
         "setono/sylius-tag-bag-plugin": "^1.1",
         "sylius/sylius": "^1.8.9",
-        "symfony/debug-bundle": "^5.1",
-        "symfony/dotenv": "^5.2",
-        "symfony/intl": "^4.4 || ^5.0",
-        "symfony/maker-bundle": "^1.15",
-        "symfony/property-info": "^4.4 || ^5.0",
-        "symfony/serializer": "^4.4 || ^5.0",
-        "symfony/web-profiler-bundle": "^5.0"
+        "symfony/debug-bundle": "^4.4 || ^5.4 || ^6.0",
+        "symfony/dotenv": "^4.4 || ^5.4 || ^6.0",
+        "symfony/intl": "^4.4 || ^5.4 || ^6.0",
+        "symfony/maker-bundle": "^1.36",
+        "symfony/property-info": "^4.4 || ^5.4 || ^6.0",
+        "symfony/serializer": "^4.4 || ^5.4 || ^6.0",
+        "symfony/web-profiler-bundle": "^4.4 || ^5.4 || ^6.0"
     },
     "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": false,
+            "ergebnis/composer-normalize": true,
+            "dealerdirect/phpcodesniffer-composer-installer": false,
+            "symfony/thanks": false
         }
     },
     "autoload": {
@@ -68,12 +67,8 @@
     },
     "prefer-stable": true,
     "scripts": {
-        "analyse": [
-            "@ensure-test-container-exists",
-            "psalm"
-        ],
+        "analyse": "psalm",
         "check-style": "ecs check src/ tests/",
-        "ensure-test-container-exists": "[[ -f tests/Application/var/cache/test/ApplicationTests_Setono_SyliusSnapchatPlugin_Application_KernelTestDebugContainer.xml ]] || tests/Application/bin/console cache:warmup --env=test",
         "fix-style": "ecs check src/ tests/ --fix",
         "phpunit": "phpunit"
     }
